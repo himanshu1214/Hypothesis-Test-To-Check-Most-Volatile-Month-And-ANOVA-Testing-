@@ -67,11 +67,44 @@
 
 # RESULTS:
 #### We calculated p-value by counting how many values out of (12X1000 trials) are greater than January value. The p-value is 0.1105 which is more than 0.05 hence is not significant. Hence, we can reject Null Hypothesis.
+![alt text](https://github.com/himanshu1214/Hypothesis-Test-To-Check-Most-Volatile-Month-And-ANOVA-Testing-/blob/master/images/8.png)
+
+#### For testing the Hypothesis 2, we compared the extremes values from the each 1000 trial and compared with January value and counted. The p-value is o.581. Hence we can reject Null Hypothesis
+![alt text](https://github.com/himanshu1214/Hypothesis-Test-To-Check-Most-Volatile-Month-And-ANOVA-Testing-/blob/master/images/9.png)
+
+# INTERPRETATION FROM BAR PLOT:
+#### The top rows show the PDF of data ‘abs_all_month’ and ‘abs_highest’.
+#### Bottom row shows the CDF of data ‘abs_all_month’ and ‘abs_highest’.
+#### The left column is the data that answers Hypothesis 1 and right column answers the Hypothesis 2.
+#### The original extreme blue line shows the AWRV Jan value 2.75. The left side plot shows that the original December value is significant at a 5% level, but only just!
+#### However, when we account for multiple comparison bias, in the right-hand plot the threshold for significance moves up from around 3.2 (abs AMVR) up to around 4.2 (see the redline).
+![alt text](https://github.com/himanshu1214/Hypothesis-Test-To-Check-Most-Volatile-Month-And-ANOVA-Testing-/blob/master/images/10.png)
+
 
 # ANOVA TESTING:
 #### After satisfying the assumptions required before using ANOVA, we applied ANOVA testing.
 
+## Population: Monthly stocks returns over the year from 2014 -2017.
+## Groups: Year 2014, Year 2015, Year 2016, Year 2017
+![alt text](https://github.com/himanshu1214/Hypothesis-Test-To-Check-Most-Volatile-Month-And-ANOVA-Testing-/blob/master/images/11.png)
 
+# Applying One Way ANOVA:
+#### Test for normality/variance criteria.
+
+## Normal distribution test:
+#### Each group compared should come from a population following the normal distribution. We used Shapiro Test to test that p value is less than 0.05.
+![alt text](https://github.com/himanshu1214/Hypothesis-Test-To-Check-Most-Volatile-Month-And-ANOVA-Testing-/blob/master/images/12.png)
+
+**All p values are greater than 0.05 therefore we fail to reject the null hypothesis. Hence, we conclude that samples come from the population that follow normal distribution.**
+
+## Variance criterion (or homogeneity of variances):
+#### Samples should come from population with same variance.
+![alt text](https://github.com/himanshu1214/Hypothesis-Test-To-Check-Most-Volatile-Month-And-ANOVA-Testing-/blob/master/images/12.png)
+**The p value is greater than 0.05, therefore we fail to reject the null hypothesis. Hence, we conclude that samples comes from population with same variance.**
+
+# ANOVA TESTING:
+#### After satisfying the assumptions required before using ANOVA, we applied ANOVA testing.
+![alt text](https://github.com/himanshu1214/Hypothesis-Test-To-Check-Most-Volatile-Month-And-ANOVA-Testing-/blob/master/images/13.png)
 
 # Interpretation of Results:
 
@@ -83,3 +116,5 @@
 # TUKEY’S TEST:
 
 #### From the Tukey’s Test we validate our results from ANOVA that we reject that mean values from the group 2014, group 2015, group 2016 and group 2017 are not same.
+
+![alt text](https://github.com/himanshu1214/Hypothesis-Test-To-Check-Most-Volatile-Month-And-ANOVA-Testing-/blob/master/images/14.png)
