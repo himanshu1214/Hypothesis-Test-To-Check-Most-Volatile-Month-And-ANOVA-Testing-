@@ -3,7 +3,7 @@
 #### ONE WAY ANOVA TESTING to compare the stock returns from Year 2014, 2015, 2016, 2017, 2018.
 
 # Data:
-	We will be using S&P500 stocks index from 2014 to 2018 data.
+####	We will be using S&P500 stocks index from 2014 to 2018 data.
 
 # Our Goal:
 #### Construct Hypothesis Testing
@@ -12,6 +12,8 @@
 
 # Wrangle Data:
 #### Volatility of the stock returns is derived based on Annualised Monthly Volatility Rankings. (AMVR)
+
+![alt text](https://github.com/himanshu1214/Hypothesis-Test-To-Check-Most-Volatile-Month-And-ANOVA-Testing-/blob/master/images/1.png)
 
 # Quick Look At the Data:
 #### We are investing the S&P500 dataset from 2014-2017 i.e. 4 years. We extracted this data from Kaggle.com. We manipulated the date to satisfy our goals. We have 7 columns and 497472 rows in the dataset after manipulation. S&P 500 index consist of 505 company stocks. Below shows the quick glance of dataset.
@@ -23,10 +25,22 @@
 # Further:
 #### We grouped the data by dates and aggregated the close as mean and created year, month column. Convert the raw unadjusted closing prices into daily % returns of S&P500 using .pct_change() method which basically takes (previous_close price – present_close_price)/previous_close_price.
 
+![alt text](https://github.com/himanshu1214/Hypothesis-Test-To-Check-Most-Volatile-Month-And-ANOVA-Testing-/blob/master/images/2.png)
+
+# Comparison plot between Apple, Google and S&P500 index stocks over a period of 4 years form 2014-2017.
+![alt text](https://github.com/himanshu1214/Hypothesis-Test-To-Check-Most-Volatile-Month-And-ANOVA-Testing-/blob/master/images/3.png)
+
+# Plot Time-series Monthly Annualised Returns over 4 years from 2014 to 2017
+![alt text](https://github.com/himanshu1214/Hypothesis-Test-To-Check-Most-Volatile-Month-And-ANOVA-Testing-/blob/master/images/4.png)
 
 ## Final Annualised-Monthly Volatility Return (AMVR) values:
+![alt text](https://github.com/himanshu1214/Hypothesis-Test-To-Check-Most-Volatile-Month-And-ANOVA-Testing-/blob/master/images/5.png)
 
 #### Finally rank all the months average are aggregated for all the years. Below data shows the final stock volatility over 12 months.
+![alt text](https://github.com/himanshu1214/Hypothesis-Test-To-Check-Most-Volatile-Month-And-ANOVA-Testing-/blob/master/images/6.png)
+
+#### Further we are interested in investigating the most extreme absolute value. Below results show the values derived by subtracting AMVR values with mean AMVR and only relative absolute value are derived.We found January(1) has the highest relative absolute volatility and April has the lowest relative absolute volatility.
+![alt text](https://github.com/himanshu1214/Hypothesis-Test-To-Check-Most-Volatile-Month-And-ANOVA-Testing-/blob/master/images/7.png)
 
 
 # Testing Hypothesis 1:
